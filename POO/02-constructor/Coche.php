@@ -2,23 +2,17 @@
 class Coche{
 
     
-
+    //PUBLIC: Desde cualquier lugar
     public $color;
-    public $marca;
-    public $modelo;
+    //PROTECTED: Desde la clase que la define y desde la clase que hereden esta clase
+    protected $marca;
+    //PRIVATE: Desde la clase que se ubica
+    private $modelo;
     public $velocidad;
     public $caballaje;
     public $plazas;
 
-    //metodo que carga al iniciar
-    //public function __construct(){
-    //    $this->color ="red";
-    //    $this->marca="Ferrari";
-    //    $this->modelo="Aventador";
-    //    $this->velocidad=100;
-    //    $this->caballaje=500;
-    //    $this->plazas=2;
-    //}
+
     public function __construct($color,$marca,$modelo,$velocidad,$caballaje,$plazas){
         $this->color =$color;
         $this->marca=$marca;

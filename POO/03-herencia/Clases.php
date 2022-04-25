@@ -6,6 +6,7 @@ class Persona{
     public $apellido;
     public $edad;
 
+    
     public function getNombre(){
         return $this->nombre;
     }
@@ -37,6 +38,9 @@ class Persona{
 
 class Informatico extends Persona{
     public $lenguajes;
+    public function __construct(){
+        $this->lenguajes = "Html,css";
+    }
     public function sabeLenguajes($lenguajes){
         return $this->lenguajes=$lenguajes;
     }
@@ -51,4 +55,15 @@ class Informatico extends Persona{
     }
 }
 
+class TecnicoRedes extends Informatico{
+    public $auditarRedes;
+    public $experienciaRedes;
+    public function __construct(){
+        parent::__construct();
+        $this->auditarRedes = "WAN ,MAN";
+    }
+    function auditoria(){
+        return "Estoy auditando una red";
+    }
+}
 ?>

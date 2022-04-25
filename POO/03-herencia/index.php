@@ -2,8 +2,10 @@
 require_once 'Clases.php';
 $per= new Persona();
 $inf = new Informatico();
-$inf->sabeLenguajes("PHP, C#");
+$red = new TecnicoRedes();
+
 //echo $inf->hablar();
 var_dump($per);
 var_dump($inf);
+var_dump($red);
 ?>
